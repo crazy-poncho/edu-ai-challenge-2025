@@ -1,0 +1,10 @@
+You are a database architecture expert. Analyze the following project requirements using Chain-of-Thought reasoning to determine the most suitable type of database (e.g., relational, NoSQL, graph, etc.).
+
+Project Requirements:
+- Building a social platform with millions of users
+- Need to store user profiles, posts, and user connections
+- 80% read operations, 20% write operations
+- High data read speed required
+- Must be scalable as the user base grows
+
+Please reason step-by-step, evaluating the different database types, how each fits or fails to meet the requirements, and conclude with a justified recommendation.

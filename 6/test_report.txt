@@ -1,0 +1,103 @@
+# Subtest: Test Case 1: Basic Encryption
+ok 1 - Test Case 1: Basic Encryption
+  ---
+  duration_ms: 1.443584
+  type: 'test'
+  ...
+# Subtest: Test Case 2: Plugboard Use
+ok 2 - Test Case 2: Plugboard Use
+  ---
+  duration_ms: 0.112583
+  type: 'test'
+  ...
+# Subtest: Test Case 3: Multiple Rotor Positions
+ok 3 - Test Case 3: Multiple Rotor Positions
+  ---
+  duration_ms: 0.078416
+  type: 'test'
+  ...
+# Subtest: Test Case 4: Ring Settings
+ok 4 - Test Case 4: Ring Settings
+  ---
+  duration_ms: 0.066625
+  type: 'test'
+  ...
+# Subtest: Test Case 5: Empty String
+ok 5 - Test Case 5: Empty String
+  ---
+  duration_ms: 0.050292
+  type: 'test'
+  ...
+# Subtest: Test Case 6: Non-Alphabetical Characters
+ok 6 - Test Case 6: Non-Alphabetical Characters
+  ---
+  duration_ms: 0.064125
+  type: 'test'
+  ...
+# Subtest: Test Case 8: Non-Alphabetic Characters (Ignore Handling)
+ok 7 - Test Case 8: Non-Alphabetic Characters (Ignore Handling)
+  ---
+  duration_ms: 0.0665
+  type: 'test'
+  ...
+# Subtest: Test Case 9: Multiple Encryption Cycles
+ok 8 - Test Case 9: Multiple Encryption Cycles
+  ---
+  duration_ms: 0.062208
+  type: 'test'
+  ...
+# Subtest: Test Case 10: Double Stepping - Middle Rotor at Notch
+ok 9 - Test Case 10: Double Stepping - Middle Rotor at Notch
+  ---
+  duration_ms: 0.115208
+  type: 'test'
+  ...
+# Subtest: Test Case 11: Double Stepping - Right Rotor at Notch
+ok 10 - Test Case 11: Double Stepping - Right Rotor at Notch
+  ---
+  duration_ms: 0.053125
+  type: 'test'
+  ...
+# Subtest: Test Case 12: Double Stepping - Both Conditions
+ok 11 - Test Case 12: Double Stepping - Both Conditions
+  ---
+  duration_ms: 0.046417
+  type: 'test'
+  ...
+# Subtest: Test Case 13: CLI Function Export
+ok 12 - Test Case 13: CLI Function Export
+  ---
+  duration_ms: 0.05425
+  type: 'test'
+  ...
+# Subtest: Test Case 14: promptEnigma Function Export
+ok 13 - Test Case 14: promptEnigma Function Export
+  ---
+  duration_ms: 0.044667
+  type: 'test'
+  ...
+# Subtest: Test Case 15: CLI Functionality with Mocked Input
+ok 14 - Test Case 15: CLI Functionality with Mocked Input
+  ---
+  duration_ms: 0.380125
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 65.108625
+# start of coverage report
+# -----------------------------------------------------------
+# file       | line % | branch % | funcs % | uncovered lines
+# -----------------------------------------------------------
+# 6          |        |          |         | 
+#  enigma.js |  98.59 |    94.44 |  100.00 | 136-137
+# -----------------------------------------------------------
+# all files  |  98.59 |    94.44 |  100.00 | 
+# -----------------------------------------------------------
+# end of coverage report

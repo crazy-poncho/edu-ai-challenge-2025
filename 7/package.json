@@ -1,0 +1,17 @@
+{
+  "name": "seabattle-modernized",
+  "version": "1.0.0",
+  "description": "A modernized version of the classic Sea Battle game with faithful gameplay",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test tests/*.test.js",
+    "test:watch": "node --test --watch tests/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=src/*.js",
+    "test:coverage:report": "node --test --experimental-test-coverage --test-coverage-include=src/*.js > test_report.txt"
+  },
+  "keywords": ["game", "battleship", "seabattle", "javascript"],
+  "author": "",
+  "license": "MIT"
+} 

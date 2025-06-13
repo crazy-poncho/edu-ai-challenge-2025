@@ -1,0 +1,1239 @@
+TAP version 13
+# Subtest: AIPlayer
+    # Subtest: constructor
+        # Subtest: should create AI player with correct initial state
+        ok 1 - should create AI player with correct initial state
+          ---
+          duration_ms: 0.653042
+          type: 'test'
+          ...
+        # Subtest: should use default name if not provided
+        ok 2 - should use default name if not provided
+          ---
+          duration_ms: 0.566
+          type: 'test'
+          ...
+        1..2
+    ok 1 - constructor
+      ---
+      duration_ms: 1.642708
+      type: 'suite'
+      ...
+    # Subtest: makeGuess
+        # Subtest: should make a valid guess in hunt mode
+        ok 1 - should make a valid guess in hunt mode
+          ---
+          duration_ms: 0.172792
+          type: 'test'
+          ...
+        # Subtest: should not repeat the same guess
+        ok 2 - should not repeat the same guess
+          ---
+          duration_ms: 0.076542
+          type: 'test'
+          ...
+        # Subtest: should prioritize target queue when in target mode
+        ok 3 - should prioritize target queue when in target mode
+          ---
+          duration_ms: 0.0665
+          type: 'test'
+          ...
+        # Subtest: should switch to hunt mode when target queue is empty
+        ok 4 - should switch to hunt mode when target queue is empty
+          ---
+          duration_ms: 0.057708
+          type: 'test'
+          ...
+        # Subtest: should skip already guessed targets and continue with queue
+        ok 5 - should skip already guessed targets and continue with queue
+          ---
+          duration_ms: 0.059167
+          type: 'test'
+          ...
+        1..5
+    ok 2 - makeGuess
+      ---
+      duration_ms: 0.527958
+      type: 'suite'
+      ...
+    # Subtest: processGuessResult
+        # Subtest: should stay in hunt mode after miss
+        ok 1 - should stay in hunt mode after miss
+          ---
+          duration_ms: 0.178334
+          type: 'test'
+          ...
+        # Subtest: should switch to target mode after hit
+        ok 2 - should switch to target mode after hit
+          ---
+          duration_ms: 0.14475
+          type: 'test'
+          ...
+        # Subtest: should add adjacent targets after hit
+        ok 3 - should add adjacent targets after hit
+          ---
+          duration_ms: 0.204833
+          type: 'test'
+          ...
+        # Subtest: should return to hunt mode after sinking ship
+        ok 4 - should return to hunt mode after sinking ship
+          ---
+          duration_ms: 0.088416
+          type: 'test'
+          ...
+        # Subtest: should not add already guessed locations to target queue
+        ok 5 - should not add already guessed locations to target queue
+          ---
+          duration_ms: 0.143583
+          type: 'test'
+          ...
+        # Subtest: should handle edge cases for target addition
+        ok 6 - should handle edge cases for target addition
+          ---
+          duration_ms: 0.072333
+          type: 'test'
+          ...
+        # Subtest: should handle board edge positions correctly
+        ok 7 - should handle board edge positions correctly
+          ---
+          duration_ms: 0.05925
+          type: 'test'
+          ...
+        1..7
+    ok 3 - processGuessResult
+      ---
+      duration_ms: 1.025917
+      type: 'suite'
+      ...
+    # Subtest: receiveAttack
+        # Subtest: should process attack on AI board correctly
+        ok 1 - should process attack on AI board correctly
+          ---
+          duration_ms: 0.164208
+          type: 'test'
+          ...
+        # Subtest: should handle miss correctly
+        ok 2 - should handle miss correctly
+          ---
+          duration_ms: 0.060333
+          type: 'test'
+          ...
+        1..2
+    ok 4 - receiveAttack
+      ---
+      duration_ms: 0.286667
+      type: 'suite'
+      ...
+    # Subtest: getRemainingShips
+        # Subtest: should return initial ship count
+        ok 1 - should return initial ship count
+          ---
+          duration_ms: 0.088
+          type: 'test'
+          ...
+        # Subtest: should decrease when ships are sunk
+        ok 2 - should decrease when ships are sunk
+          ---
+          duration_ms: 0.068417
+          type: 'test'
+          ...
+        1..2
+    ok 5 - getRemainingShips
+      ---
+      duration_ms: 0.207417
+      type: 'suite'
+      ...
+    # Subtest: hasLost
+        # Subtest: should return false initially
+        ok 1 - should return false initially
+          ---
+          duration_ms: 0.07275
+          type: 'test'
+          ...
+        # Subtest: should return true when all ships are sunk
+        ok 2 - should return true when all ships are sunk
+          ---
+          duration_ms: 0.076834
+          type: 'test'
+          ...
+        1..2
+    ok 6 - hasLost
+      ---
+      duration_ms: 0.197583
+      type: 'suite'
+      ...
+    # Subtest: getStats
+        # Subtest: should return comprehensive stats
+        ok 1 - should return comprehensive stats
+          ---
+          duration_ms: 0.590542
+          type: 'test'
+          ...
+        # Subtest: should update stats after making guesses
+        ok 2 - should update stats after making guesses
+          ---
+          duration_ms: 0.074
+          type: 'test'
+          ...
+        1..2
+    ok 7 - getStats
+      ---
+      duration_ms: 0.735459
+      type: 'suite'
+      ...
+    # Subtest: resetStrategy
+        # Subtest: should reset AI strategy to initial state
+        ok 1 - should reset AI strategy to initial state
+          ---
+          duration_ms: 0.076958
+          type: 'test'
+          ...
+        1..1
+    ok 8 - resetStrategy
+      ---
+      duration_ms: 0.114958
+      type: 'suite'
+      ...
+    # Subtest: getCurrentMode
+        # Subtest: should return current mode
+        ok 1 - should return current mode
+          ---
+          duration_ms: 0.066083
+          type: 'test'
+          ...
+        1..1
+    ok 9 - getCurrentMode
+      ---
+      duration_ms: 0.102375
+      type: 'suite'
+      ...
+    # Subtest: getTargetQueue
+        # Subtest: should return copy of target queue
+        ok 1 - should return copy of target queue
+          ---
+          duration_ms: 0.07625
+          type: 'test'
+          ...
+        1..1
+    ok 10 - getTargetQueue
+      ---
+      duration_ms: 0.111041
+      type: 'suite'
+      ...
+    # Subtest: AI Strategy Integration
+        # Subtest: should demonstrate complete hunt-to-target-to-hunt cycle
+        ok 1 - should demonstrate complete hunt-to-target-to-hunt cycle
+          ---
+          duration_ms: 0.080833
+          type: 'test'
+          ...
+        # Subtest: should handle multiple hits on same ship
+        ok 2 - should handle multiple hits on same ship
+          ---
+          duration_ms: 0.058834
+          type: 'test'
+          ...
+        # Subtest: should maintain valid target queue after multiple operations
+        ok 3 - should maintain valid target queue after multiple operations
+          ---
+          duration_ms: 0.081833
+          type: 'test'
+          ...
+        1..3
+    ok 11 - AI Strategy Integration
+      ---
+      duration_ms: 0.278958
+      type: 'suite'
+      ...
+    1..11
+ok 1 - AIPlayer
+  ---
+  duration_ms: 6.13875
+  type: 'suite'
+  ...
+# Subtest: Board
+    # Subtest: constructor
+        # Subtest: should create a board with correct size and initial state
+        ok 1 - should create a board with correct size and initial state
+          ---
+          duration_ms: 0.411834
+          type: 'test'
+          ...
+        # Subtest: should create board with showShips flag
+        ok 2 - should create board with showShips flag
+          ---
+          duration_ms: 0.05975
+          type: 'test'
+          ...
+        # Subtest: should initialize grid with water symbols
+        ok 3 - should initialize grid with water symbols
+          ---
+          duration_ms: 0.679833
+          type: 'test'
+          ...
+        1..3
+    ok 1 - constructor
+      ---
+      duration_ms: 1.748459
+      type: 'suite'
+      ...
+    # Subtest: isValidCoordinate
+        # Subtest: should return true for valid coordinates
+        ok 1 - should return true for valid coordinates
+          ---
+          duration_ms: 0.1065
+          type: 'test'
+          ...
+        # Subtest: should return false for invalid coordinates
+        ok 2 - should return false for invalid coordinates
+          ---
+          duration_ms: 0.055583
+          type: 'test'
+          ...
+        1..2
+    ok 2 - isValidCoordinate
+      ---
+      duration_ms: 0.228541
+      type: 'suite'
+      ...
+    # Subtest: parseLocation
+        # Subtest: should parse valid location strings
+        ok 1 - should parse valid location strings
+          ---
+          duration_ms: 0.549084
+          type: 'test'
+          ...
+        # Subtest: should throw error for invalid location format
+        ok 2 - should throw error for invalid location format
+          ---
+          duration_ms: 0.283959
+          type: 'test'
+          ...
+        1..2
+    ok 3 - parseLocation
+      ---
+      duration_ms: 0.886833
+      type: 'suite'
+      ...
+    # Subtest: formatLocation
+        # Subtest: should format coordinates to location string
+        ok 1 - should format coordinates to location string
+          ---
+          duration_ms: 0.081833
+          type: 'test'
+          ...
+        1..1
+    ok 4 - formatLocation
+      ---
+      duration_ms: 0.319333
+      type: 'suite'
+      ...
+    # Subtest: canPlaceShip
+        # Subtest: should allow placement in empty area
+        ok 1 - should allow placement in empty area
+          ---
+          duration_ms: 0.096166
+          type: 'test'
+          ...
+        # Subtest: should not allow placement outside bounds
+        ok 2 - should not allow placement outside bounds
+          ---
+          duration_ms: 0.108
+          type: 'test'
+          ...
+        # Subtest: should not allow placement over existing ship
+        ok 3 - should not allow placement over existing ship
+          ---
+          duration_ms: 0.096083
+          type: 'test'
+          ...
+        1..3
+    ok 5 - canPlaceShip
+      ---
+      duration_ms: 0.362042
+      type: 'suite'
+      ...
+    # Subtest: createAndPlaceShip
+        # Subtest: should create and place horizontal ship
+        ok 1 - should create and place horizontal ship
+          ---
+          duration_ms: 0.087167
+          type: 'test'
+          ...
+        # Subtest: should create and place vertical ship
+        ok 2 - should create and place vertical ship
+          ---
+          duration_ms: 0.047208
+          type: 'test'
+          ...
+        # Subtest: should mark grid positions when showShips is true
+        ok 3 - should mark grid positions when showShips is true
+          ---
+          duration_ms: 0.059459
+          type: 'test'
+          ...
+        # Subtest: should not mark grid positions when showShips is false
+        ok 4 - should not mark grid positions when showShips is false
+          ---
+          duration_ms: 0.051875
+          type: 'test'
+          ...
+        1..4
+    ok 6 - createAndPlaceShip
+      ---
+      duration_ms: 0.312667
+      type: 'suite'
+      ...
+    # Subtest: placeShipRandomly
+        # Subtest: should place ship successfully
+        ok 1 - should place ship successfully
+          ---
+          duration_ms: 0.12425
+          type: 'test'
+          ...
+        # Subtest: should place multiple ships without collision
+        ok 2 - should place multiple ships without collision
+          ---
+          duration_ms: 0.071584
+          type: 'test'
+          ...
+        1..2
+    ok 7 - placeShipRandomly
+      ---
+      duration_ms: 0.242542
+      type: 'suite'
+      ...
+    # Subtest: processGuess
+        # Subtest: should process hit correctly
+        ok 1 - should process hit correctly
+          ---
+          duration_ms: 0.380792
+          type: 'test'
+          ...
+        # Subtest: should process miss correctly
+        ok 2 - should process miss correctly
+          ---
+          duration_ms: 0.068333
+          type: 'test'
+          ...
+        # Subtest: should detect sunk ship
+        ok 3 - should detect sunk ship
+          ---
+          duration_ms: 0.055542
+          type: 'test'
+          ...
+        # Subtest: should handle already guessed location
+        ok 4 - should handle already guessed location
+          ---
+          duration_ms: 0.050834
+          type: 'test'
+          ...
+        # Subtest: should track guesses
+        ok 5 - should track guesses
+          ---
+          duration_ms: 0.05475
+          type: 'test'
+          ...
+        1..5
+    ok 8 - processGuess
+      ---
+      duration_ms: 0.698834
+      type: 'suite'
+      ...
+    # Subtest: getRemainingShipCount
+        # Subtest: should return correct count for unsunk ships
+        ok 1 - should return correct count for unsunk ships
+          ---
+          duration_ms: 0.11525
+          type: 'test'
+          ...
+        # Subtest: should return correct count after sinking ships
+        ok 2 - should return correct count after sinking ships
+          ---
+          duration_ms: 0.063292
+          type: 'test'
+          ...
+        # Subtest: should return 0 when all ships are sunk
+        ok 3 - should return 0 when all ships are sunk
+          ---
+          duration_ms: 0.054458
+          type: 'test'
+          ...
+        1..3
+    ok 9 - getRemainingShipCount
+      ---
+      duration_ms: 0.723791
+      type: 'suite'
+      ...
+    # Subtest: getGrid
+        # Subtest: should return a copy of the grid
+        ok 1 - should return a copy of the grid
+          ---
+          duration_ms: 0.064667
+          type: 'test'
+          ...
+        1..1
+    ok 10 - getGrid
+      ---
+      duration_ms: 0.099709
+      type: 'suite'
+      ...
+    # Subtest: getGuesses
+        # Subtest: should return array of all guesses
+        ok 1 - should return array of all guesses
+          ---
+          duration_ms: 0.065083
+          type: 'test'
+          ...
+        1..1
+    ok 11 - getGuesses
+      ---
+      duration_ms: 0.098458
+      type: 'suite'
+      ...
+    1..11
+ok 2 - Board
+  ---
+  duration_ms: 6.182833
+  type: 'suite'
+  ...
+#    OPPONENT BOARD              YOUR BOARD
+#   0 1 2 3 4 5 6 7 8 9        0 1 2 3 4 5 6 7 8 9 
+# 0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 1 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     1 ~ X X X ~ ~ ~ ~ ~ ~ 
+# 2 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     2 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 3 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     3 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 4 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     4 ~ ~ ~ X X X ~ ~ ~ ~ 
+# 5 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     5 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 6 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     6 ~ ~ ~ ~ X X X ~ ~ ~ 
+# 7 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     7 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 8 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     8 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 9 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     9 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# Game Over!
+# Computer wins! All your battleships have been sunk!
+#    OPPONENT BOARD              YOUR BOARD
+#   0 1 2 3 4 5 6 7 8 9        0 1 2 3 4 5 6 7 8 9 
+# 0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 1 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     1 ~ ~ ~ ~ ~ ~ ~ S ~ ~ 
+# 2 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     2 ~ ~ ~ ~ ~ ~ ~ S ~ ~ 
+# 3 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     3 ~ ~ ~ S ~ ~ ~ S ~ ~ 
+# 4 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     4 ~ ~ ~ S ~ ~ ~ ~ ~ ~ 
+# 5 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     5 ~ ~ ~ S ~ ~ ~ ~ ~ ~ 
+# 6 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     6 S ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 7 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     7 S ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 8 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     8 S ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 9 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     9 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# Game Over!
+# Player wins! You sunk all the computer's battleships!
+# Subtest: Game
+    # Subtest: constructor
+        # Subtest: should create game with initial state
+        ok 1 - should create game with initial state
+          ---
+          duration_ms: 0.668541
+          type: 'test'
+          ...
+        # Subtest: should create players with correct names
+        ok 2 - should create players with correct names
+          ---
+          duration_ms: 0.082333
+          type: 'test'
+          ...
+        1..2
+    ok 1 - constructor
+      ---
+      duration_ms: 1.283584
+      type: 'suite'
+      ...
+    # Subtest: checkGameOver
+        # Subtest: should return false when game is ongoing
+        ok 1 - should return false when game is ongoing
+          ---
+          duration_ms: 0.256625
+          type: 'test'
+          ...
+        # Subtest: should return true when player loses
+        ok 2 - should return true when player loses
+          ---
+          duration_ms: 1.242917
+          type: 'test'
+          ...
+        # Subtest: should return true when AI loses
+        ok 3 - should return true when AI loses
+          ---
+          duration_ms: 0.242084
+          type: 'test'
+          ...
+        1..3
+    ok 2 - checkGameOver
+      ---
+      duration_ms: 1.837166
+      type: 'suite'
+      ...
+    # Subtest: getWinner
+        # Subtest: should return null when game is ongoing
+        ok 1 - should return null when game is ongoing
+          ---
+          duration_ms: 0.109375
+          type: 'test'
+          ...
+        # Subtest: should return AI name when player loses
+        ok 2 - should return AI name when player loses
+          ---
+          duration_ms: 0.092875
+          type: 'test'
+          ...
+        # Subtest: should return player name when AI loses
+        ok 3 - should return player name when AI loses
+          ---
+          duration_ms: 0.090208
+          type: 'test'
+          ...
+        1..3
+    ok 3 - getWinner
+      ---
+      duration_ms: 0.363667
+      type: 'suite'
+      ...
+    # Subtest: getGameState
+        # Subtest: should return complete game state
+        ok 1 - should return complete game state
+          ---
+          duration_ms: 0.595791
+          type: 'test'
+          ...
+        # Subtest: should reflect winner when game is over
+        ok 2 - should reflect winner when game is over
+          ---
+          duration_ms: 0.104166
+          type: 'test'
+          ...
+        1..2
+    ok 4 - getGameState
+      ---
+      duration_ms: 0.837583
+      type: 'suite'
+      ...
+    # Subtest: getGameStats
+        # Subtest: should return comprehensive game statistics
+        ok 1 - should return comprehensive game statistics
+          ---
+          duration_ms: 0.617459
+          type: 'test'
+          ...
+        1..1
+    ok 5 - getGameStats
+      ---
+      duration_ms: 0.666291
+      type: 'suite'
+      ...
+    # Subtest: reset
+        # Subtest: should reset game to initial state
+        ok 1 - should reset game to initial state
+          ---
+          duration_ms: 0.272625
+          type: 'test'
+          ...
+        1..1
+    ok 6 - reset
+      ---
+      duration_ms: 0.318625
+      type: 'suite'
+      ...
+    # Subtest: endGame
+        # Subtest: should clean up resources
+        ok 1 - should clean up resources
+          ---
+          duration_ms: 0.099458
+          type: 'test'
+          ...
+        # Subtest: should handle null readline interface
+        ok 2 - should handle null readline interface
+          ---
+          duration_ms: 0.115375
+          type: 'test'
+          ...
+        1..2
+    ok 7 - endGame
+      ---
+      duration_ms: 0.268334
+      type: 'suite'
+      ...
+#    OPPONENT BOARD              YOUR BOARD
+#   0 1 2 3 4 5 6 7 8 9        0 1 2 3 4 5 6 7 8 9 
+# 0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 1 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     1 ~ ~ S S S ~ ~ ~ ~ ~ 
+# 2 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     2 ~ ~ ~ ~ ~ ~ ~ S S S 
+# 3 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     3 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 4 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     4 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 5 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     5 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 6 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     6 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 7 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     7 ~ ~ ~ ~ ~ ~ ~ ~ ~ S 
+# 8 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     8 ~ ~ ~ ~ ~ ~ ~ ~ ~ S 
+# 9 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     9 ~ ~ ~ ~ ~ ~ ~ ~ ~ S 
+# --- CPU's Turn ---
+# CPU MISS at 66.
+# --- CPU's Turn ---
+# CPU HIT at 12.
+#    OPPONENT BOARD              YOUR BOARD
+#   0 1 2 3 4 5 6 7 8 9        0 1 2 3 4 5 6 7 8 9 
+# 0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 1 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     1 ~ S S S ~ ~ ~ ~ ~ ~ 
+# 2 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     2 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 3 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     3 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 4 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     4 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 5 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     5 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 6 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     6 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+# 7 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     7 ~ ~ ~ ~ ~ ~ ~ ~ ~ S 
+# 8 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     8 S S S ~ ~ ~ ~ ~ ~ S 
+# 9 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~     9 ~ ~ ~ ~ ~ ~ ~ ~ ~ S 
+# Game Over!
+# Player wins! You sunk all the computer's battleships!
+# --- CPU's Turn ---
+# CPU MISS at 87.
+    # Subtest: delay
+        # Subtest: should resolve after specified time
+        ok 1 - should resolve after specified time
+          ---
+          duration_ms: 51.187458
+          type: 'test'
+          ...
+        1..1
+    ok 8 - delay
+      ---
+      duration_ms: 51.340041
+      type: 'suite'
+      ...
+    # Subtest: displayGameState
+        # Subtest: should not throw when displaying game state
+        ok 1 - should not throw when displaying game state
+          ---
+          duration_ms: 0.320958
+          type: 'test'
+          ...
+        1..1
+    ok 9 - displayGameState
+      ---
+      duration_ms: 0.373041
+      type: 'suite'
+      ...
+    # Subtest: handleAITurn
+        # Subtest: should process AI turn correctly
+        ok 1 - should process AI turn correctly
+          ---
+          duration_ms: 0.252167
+          type: 'test'
+          ...
+        # Subtest: should update AI strategy based on result
+        ok 2 - should update AI strategy based on result
+          ---
+          duration_ms: 0.187208
+          type: 'test'
+          ...
+        1..2
+    ok 10 - handleAITurn
+      ---
+      duration_ms: 0.494375
+      type: 'suite'
+      ...
+    # Subtest: Integration Tests
+        # Subtest: should maintain proper game flow
+        ok 1 - should maintain proper game flow
+          ---
+          duration_ms: 0.079958
+          type: 'test'
+          ...
+        # Subtest: should handle complete game scenario
+        ok 2 - should handle complete game scenario
+          ---
+          duration_ms: 0.2085
+          type: 'test'
+          ...
+        # Subtest: should maintain board state consistency throughout game
+        ok 3 - should maintain board state consistency throughout game
+          ---
+          duration_ms: 0.10475
+          type: 'test'
+          ...
+        1..3
+    ok 11 - Integration Tests
+      ---
+      duration_ms: 0.458625
+      type: 'suite'
+      ...
+    # Subtest: Error Handling
+        # Subtest: should handle errors gracefully
+        ok 1 - should handle errors gracefully
+          ---
+          duration_ms: 0.109417
+          type: 'test'
+          ...
+        # Subtest: should handle AI guess errors
+        ok 2 - should handle AI guess errors
+          ---
+          duration_ms: 0.106042
+          type: 'test'
+          ...
+        1..2
+    ok 12 - Error Handling
+      ---
+      duration_ms: 0.263458
+      type: 'suite'
+      ...
+    1..12
+ok 3 - Game
+  ---
+  duration_ms: 59.027916
+  type: 'suite'
+  ...
+# Subtest: Player
+    # Subtest: constructor
+        # Subtest: should create player with correct initial state
+        ok 1 - should create player with correct initial state
+          ---
+          duration_ms: 0.639208
+          type: 'test'
+          ...
+        # Subtest: should use default name if not provided
+        ok 2 - should use default name if not provided
+          ---
+          duration_ms: 0.092208
+          type: 'test'
+          ...
+        # Subtest: should set up board with ships
+        ok 3 - should set up board with ships
+          ---
+          duration_ms: 0.089625
+          type: 'test'
+          ...
+        1..3
+    ok 1 - constructor
+      ---
+      duration_ms: 1.679208
+      type: 'suite'
+      ...
+    # Subtest: makeGuess
+        # Subtest: should accept valid guess format
+        ok 1 - should accept valid guess format
+          ---
+          duration_ms: 0.613542
+          type: 'test'
+          ...
+        # Subtest: should reject invalid guess formats
+        ok 2 - should reject invalid guess formats
+          ---
+          duration_ms: 0.101958
+          type: 'test'
+          ...
+        # Subtest: should reject out of bounds coordinates
+        ok 3 - should reject out of bounds coordinates
+          ---
+          duration_ms: 0.061083
+          type: 'test'
+          ...
+        # Subtest: should reject already guessed locations
+        ok 4 - should reject already guessed locations
+          ---
+          duration_ms: 0.059417
+          type: 'test'
+          ...
+        # Subtest: should track guesses correctly
+        ok 5 - should track guesses correctly
+          ---
+          duration_ms: 0.059583
+          type: 'test'
+          ...
+        1..5
+    ok 2 - makeGuess
+      ---
+      duration_ms: 0.988166
+      type: 'suite'
+      ...
+    # Subtest: isValidGuessFormat
+        # Subtest: should return true for valid formats
+        ok 1 - should return true for valid formats
+          ---
+          duration_ms: 0.073667
+          type: 'test'
+          ...
+        # Subtest: should return false for invalid formats
+        ok 2 - should return false for invalid formats
+          ---
+          duration_ms: 0.060208
+          type: 'test'
+          ...
+        1..2
+    ok 3 - isValidGuessFormat
+      ---
+      duration_ms: 0.184542
+      type: 'suite'
+      ...
+    # Subtest: receiveAttack
+        # Subtest: should process hit on player ship
+        ok 1 - should process hit on player ship
+          ---
+          duration_ms: 0.212125
+          type: 'test'
+          ...
+        # Subtest: should process miss correctly
+        ok 2 - should process miss correctly
+          ---
+          duration_ms: 0.085625
+          type: 'test'
+          ...
+        # Subtest: should detect sunk ship
+        ok 3 - should detect sunk ship
+          ---
+          duration_ms: 0.075292
+          type: 'test'
+          ...
+        # Subtest: should handle already attacked location
+        ok 4 - should handle already attacked location
+          ---
+          duration_ms: 0.058292
+          type: 'test'
+          ...
+        1..4
+    ok 4 - receiveAttack
+      ---
+      duration_ms: 0.506084
+      type: 'suite'
+      ...
+    # Subtest: updateOpponentBoard
+        # Subtest: should update opponent board with hit
+        ok 1 - should update opponent board with hit
+          ---
+          duration_ms: 0.111334
+          type: 'test'
+          ...
+        # Subtest: should update opponent board with miss
+        ok 2 - should update opponent board with miss
+          ---
+          duration_ms: 0.060958
+          type: 'test'
+          ...
+        1..2
+    ok 5 - updateOpponentBoard
+      ---
+      duration_ms: 0.218916
+      type: 'suite'
+      ...
+    # Subtest: getRemainingShips
+        # Subtest: should return initial ship count
+        ok 1 - should return initial ship count
+          ---
+          duration_ms: 0.069917
+          type: 'test'
+          ...
+        # Subtest: should decrease when ships are sunk
+        ok 2 - should decrease when ships are sunk
+          ---
+          duration_ms: 0.061958
+          type: 'test'
+          ...
+        1..2
+    ok 6 - getRemainingShips
+      ---
+      duration_ms: 0.17875
+      type: 'suite'
+      ...
+    # Subtest: hasLost
+        # Subtest: should return false initially
+        ok 1 - should return false initially
+          ---
+          duration_ms: 0.0715
+          type: 'test'
+          ...
+        # Subtest: should return true when all ships are sunk
+        ok 2 - should return true when all ships are sunk
+          ---
+          duration_ms: 0.8385
+          type: 'test'
+          ...
+        1..2
+    ok 7 - hasLost
+      ---
+      duration_ms: 0.970667
+      type: 'suite'
+      ...
+    # Subtest: getBoard
+        # Subtest: should return player board grid
+        ok 1 - should return player board grid
+          ---
+          duration_ms: 0.098959
+          type: 'test'
+          ...
+        1..1
+    ok 8 - getBoard
+      ---
+      duration_ms: 0.142
+      type: 'suite'
+      ...
+    # Subtest: getOpponentBoard
+        # Subtest: should return opponent board grid
+        ok 1 - should return opponent board grid
+          ---
+          duration_ms: 0.100042
+          type: 'test'
+          ...
+        # Subtest: should show hits and misses after attacks
+        ok 2 - should show hits and misses after attacks
+          ---
+          duration_ms: 0.062917
+          type: 'test'
+          ...
+        1..2
+    ok 9 - getOpponentBoard
+      ---
+      duration_ms: 0.211292
+      type: 'suite'
+      ...
+    # Subtest: getStats
+        # Subtest: should return comprehensive player stats
+        ok 1 - should return comprehensive player stats
+          ---
+          duration_ms: 0.119
+          type: 'test'
+          ...
+        # Subtest: should update stats after guesses
+        ok 2 - should update stats after guesses
+          ---
+          duration_ms: 0.05925
+          type: 'test'
+          ...
+        # Subtest: should update stats when ships are lost
+        ok 3 - should update stats when ships are lost
+          ---
+          duration_ms: 0.067625
+          type: 'test'
+          ...
+        # Subtest: should update hasLost when all ships are sunk
+        ok 4 - should update hasLost when all ships are sunk
+          ---
+          duration_ms: 0.076042
+          type: 'test'
+          ...
+        1..4
+    ok 10 - getStats
+      ---
+      duration_ms: 0.393
+      type: 'suite'
+      ...
+    # Subtest: Integration Tests
+        # Subtest: should handle complete game interaction sequence
+        ok 1 - should handle complete game interaction sequence
+          ---
+          duration_ms: 0.087208
+          type: 'test'
+          ...
+        # Subtest: should maintain board state consistency
+        ok 2 - should maintain board state consistency
+          ---
+          duration_ms: 0.081917
+          type: 'test'
+          ...
+        1..2
+    ok 11 - Integration Tests
+      ---
+      duration_ms: 0.214667
+      type: 'suite'
+      ...
+    1..11
+ok 4 - Player
+  ---
+  duration_ms: 6.141542
+  type: 'suite'
+  ...
+# Subtest: Ship
+    # Subtest: constructor
+        # Subtest: should create a ship with correct locations and length
+        ok 1 - should create a ship with correct locations and length
+          ---
+          duration_ms: 0.825042
+          type: 'test'
+          ...
+        # Subtest: should create a copy of locations array
+        ok 2 - should create a copy of locations array
+          ---
+          duration_ms: 0.069625
+          type: 'test'
+          ...
+        # Subtest: should default to length 3 if not specified
+        ok 3 - should default to length 3 if not specified
+          ---
+          duration_ms: 0.054167
+          type: 'test'
+          ...
+        1..3
+    ok 1 - constructor
+      ---
+      duration_ms: 1.506375
+      type: 'suite'
+      ...
+    # Subtest: hit
+        # Subtest: should successfully hit a valid location
+        ok 1 - should successfully hit a valid location
+          ---
+          duration_ms: 0.095167
+          type: 'test'
+          ...
+        # Subtest: should return false for invalid location
+        ok 2 - should return false for invalid location
+          ---
+          duration_ms: 0.053042
+          type: 'test'
+          ...
+        # Subtest: should return false for already hit location
+        ok 3 - should return false for already hit location
+          ---
+          duration_ms: 0.05225
+          type: 'test'
+          ...
+        # Subtest: should hit multiple different locations
+        ok 4 - should hit multiple different locations
+          ---
+          duration_ms: 0.696625
+          type: 'test'
+          ...
+        1..4
+    ok 2 - hit
+      ---
+      duration_ms: 0.998583
+      type: 'suite'
+      ...
+    # Subtest: isSunk
+        # Subtest: should return false for unhit ship
+        ok 1 - should return false for unhit ship
+          ---
+          duration_ms: 0.1135
+          type: 'test'
+          ...
+        # Subtest: should return false for partially hit ship
+        ok 2 - should return false for partially hit ship
+          ---
+          duration_ms: 0.051708
+          type: 'test'
+          ...
+        # Subtest: should return true for completely hit ship
+        ok 3 - should return true for completely hit ship
+          ---
+          duration_ms: 0.045833
+          type: 'test'
+          ...
+        1..3
+    ok 3 - isSunk
+      ---
+      duration_ms: 0.28325
+      type: 'suite'
+      ...
+    # Subtest: hasLocation
+        # Subtest: should return true for valid location
+        ok 1 - should return true for valid location
+          ---
+          duration_ms: 0.069459
+          type: 'test'
+          ...
+        # Subtest: should return false for invalid location
+        ok 2 - should return false for invalid location
+          ---
+          duration_ms: 0.041625
+          type: 'test'
+          ...
+        # Subtest: should check all locations
+        ok 3 - should check all locations
+          ---
+          duration_ms: 0.044834
+          type: 'test'
+          ...
+        1..3
+    ok 4 - hasLocation
+      ---
+      duration_ms: 0.21525
+      type: 'suite'
+      ...
+    # Subtest: isLocationHit
+        # Subtest: should return false for unhit location
+        ok 1 - should return false for unhit location
+          ---
+          duration_ms: 0.074875
+          type: 'test'
+          ...
+        # Subtest: should return true for hit location
+        ok 2 - should return true for hit location
+          ---
+          duration_ms: 0.039875
+          type: 'test'
+          ...
+        # Subtest: should return false for invalid location
+        ok 3 - should return false for invalid location
+          ---
+          duration_ms: 0.041541
+          type: 'test'
+          ...
+        1..3
+    ok 5 - isLocationHit
+      ---
+      duration_ms: 0.219334
+      type: 'suite'
+      ...
+    # Subtest: getStatus
+        # Subtest: should return complete status for unhit ship
+        ok 1 - should return complete status for unhit ship
+          ---
+          duration_ms: 0.118125
+          type: 'test'
+          ...
+        # Subtest: should return status for partially hit ship
+        ok 2 - should return status for partially hit ship
+          ---
+          duration_ms: 0.05775
+          type: 'test'
+          ...
+        # Subtest: should return status for sunk ship
+        ok 3 - should return status for sunk ship
+          ---
+          duration_ms: 0.053292
+          type: 'test'
+          ...
+        # Subtest: should return copies of arrays
+        ok 4 - should return copies of arrays
+          ---
+          duration_ms: 0.044209
+          type: 'test'
+          ...
+        1..4
+    ok 6 - getStatus
+      ---
+      duration_ms: 0.34075
+      type: 'suite'
+      ...
+    1..6
+ok 5 - Ship
+  ---
+  duration_ms: 4.016541
+  type: 'suite'
+  ...
+1..5
+# tests 127
+# suites 56
+# pass 127
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 119.280542
+# start of coverage report
+# --------------------------------------------------------------------------------------------------
+# file            | line % | branch % | funcs % | uncovered lines
+# --------------------------------------------------------------------------------------------------
+# src             |        |          |         | 
+#  AIPlayer.js    |  96.23 |    94.29 |   86.67 | 63-64 102-103 163-164 171-172
+#  Board.js       |  99.15 |    98.39 |  100.00 | 92-93
+#  Game.js        |  70.83 |    95.65 |   68.75 | 22-25 31-35 41-43 49-74 91-120 220-221
+#  GameDisplay.js |  76.67 |    81.25 |   40.00 | 49-67 73-77 83-84 104-105 116-117 139-141 148-149
+#  Player.js      |  93.20 |    91.67 |  100.00 | 43-47 66-70
+#  Ship.js        | 100.00 |   100.00 |  100.00 | 
+# --------------------------------------------------------------------------------------------------
+# all files       |  88.14 |    94.83 |   83.75 | 
+# --------------------------------------------------------------------------------------------------
+# end of coverage report
